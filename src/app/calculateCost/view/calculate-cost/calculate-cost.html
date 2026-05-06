@@ -1,0 +1,21 @@
+<div class="relative w-full">
+
+  <div class="flex flex-col gap-2">
+    <div class="max-h-[80dvh] overflow-y-auto">
+      <total-cost />
+      <div>
+        <list-items />
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <button (click)="openModal()"
+        class="font-semibold w-fit border rounded-lg p-2 cursor-pointer bg-orange-600 hover:bg-orange-500 text-white">Add</button>
+    </div>
+  </div>
+
+
+  @if(isOpenModal()){
+  <modal titleModal="Add Item" />
+  }
+
+</div>

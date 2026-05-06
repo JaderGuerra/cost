@@ -1,0 +1,31 @@
+<div class="fixed inset-0 bg-black/50 z-40 backdrop-blur-[2px]" (click)="closeModal()">
+</div>
+<div
+  class="fixed flex flex-col gap-4 inset-0 m-auto z-50 border border-gray-700 rounded-lg bg-gray-800 w-87.5 h-fit p-4">
+  <div class="flex justify-between">
+    <h2 class="text-white">
+      {{titleModal}}
+    </h2>
+    <button class="cursor-pointer text-white" (click)="closeModal()">X</button>
+  </div>
+  <div class="flex flex-col gap-4">
+    <input-file [autofocus]="true" inputMode="text" label="Name" placeholder="Name Product" [(value)]="itemName" />
+
+    <div class="grid grid-cols-3 gap-4">
+      <input-file type="number" inputMode="numeric" label="Count" [(value)]="itemCount" />
+      <div class="col-span-2">
+        <input-file type="number" inputMode="numeric" label="Price" placeholder="$000.00" [(value)]="itemPrice" />
+      </div>
+    </div>
+    <app-switch label="Keep open modal" [(checked)]="keepOpenModal" />
+  </div>
+
+  <div class="flex items-center justify-center gap-4 w-full mt-4">
+    <button class="p-2 rounded-lg cursor-pointer bg-gray-500 hover:bg-gray-400 text-white font-semibold"
+      (click)="closeModal()">Cancel</button>
+    <button class="p-2 rounded-lg cursor-pointer bg-orange-400 hover:bg-orange-500 text-white font-semibold"
+      (click)="save()">
+      Add New Product
+    </button>
+  </div>
+</div>
