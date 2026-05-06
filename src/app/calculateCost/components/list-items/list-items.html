@@ -1,21 +1,21 @@
 <table class="table-fixed w-full">
   <thead class="bg-gray-800 text-white sticky top-12 ">
     <tr>
-      <th class="text-left p-1">#</th>
-      <th class="text-left p-1">Name</th>
-      <th class="text-left p-1">Count</th>
-      <th class="text-left p-1">Price</th>
-      <th class="text-left p-1">Edit</th>
+      <th class="text-left p-2">#</th>
+      <th class="text-left p-2">Name</th>
+      <th class="text-left p-2">Count</th>
+      <th class="text-left p-2">Price</th>
+      <th class="text-left p-2">Edit</th>
     </tr>
   </thead>
   <tbody class="bg-gray-700">
     @for (item of listItems(); track item.id; let i = $index) {
     <tr class="odd:bg-gray-600 even:bg-gray-700 cursor-pointer hover:bg-gray-800/70">
-      <td class="p-2 text-white">{{ i+ 1 }}</td>
-      <td class="p-2 text-white">{{ item.name |titlecase }}</td>
-      <td class="p-2 text-white">{{ item.count }}</td>
-      <td class="p-2 text-white">{{ item.price | currency:'USD':'symbol':'1.0-0' }}</td>
-      <td class="p-2 text-white">
+      <td class="p-4 text-white">{{ i+ 1 }}</td>
+      <td class="p-4 text-white">{{ item.name |titlecase }}</td>
+      <td class="p-4 text-white">{{ item.count }}</td>
+      <td class="p-4 text-white">{{ item.price | currency:'USD':'symbol':'1.0-0' }}</td>
+      <td class="p-4 text-white">
         <div class="flex items-center gap-4 w-fit">
           <button class="cursor-pointer" (click)="selectItenToEdit(item)">
             <svg lucideEdit class="w-5 h-5 text-orange-400 hover:text-orange-500"></svg>
