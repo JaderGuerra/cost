@@ -1,5 +1,5 @@
 <table class="table-fixed w-full">
-  <thead class="bg-gray-800 text-white sticky top-12 ">
+  <thead class="bg-gray-800 text-white sticky top-[67px] z-10">
     <tr>
       <th class="text-left p-2">#</th>
       <th class="text-left p-2">Name</th>
@@ -12,7 +12,7 @@
     @for (item of listItems(); track item.id; let i = $index) {
     <tr class="odd:bg-gray-600 even:bg-gray-700 cursor-pointer hover:bg-gray-800/70">
       <td class="p-4 text-white">{{ i+ 1 }}</td>
-      <td class="p-4 text-white">{{ item.name |titlecase }}</td>
+      <td class="p-4 text-white wrap-break-word">{{ item.name |titlecase }}</td>
       <td class="p-4 text-white">{{ item.count }}</td>
       <td class="p-4 text-white">{{ item.price | currency:'USD':'symbol':'1.0-0' }}</td>
       <td class="p-4 text-white">
